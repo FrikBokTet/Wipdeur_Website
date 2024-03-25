@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Deur_Logo.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Get Your Qoute</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Logo.jpg" alt="Home_Logo" width="150px">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form Section -->
+
+    <section class="measurements bg-primary">
+        <h2>Fill in the details below and get your qoute</h2>
+            <form action="https://formsubmit.co/c7552b9c0eeae4543a790120c22f2745" method="POST">
+
+                <!-- Honeypot -->
+
+                    <input type="text" name="_honey" style="display: none;">
+
+                <!-- Disable Captcha -->
+
+                    <input type="hidden" name="_captcha" value="false">
+
+                <h3>Contact Information</h3>
+                <div class="info-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Full Name" name="name" class="item" autocomplete="off" required>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Enter Your Address" name="address" class="item" autocomplete="off" >
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Enter Your Email" name="email" class="item" autocomplete="off" required>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Enter Your Phonenumber" name="phone" class="item" autocomplete="off" >
+                    </div>
+                </div>
+                <h3>Door Customization</h3>
+                    <div class="door-box">
+                        <div class="input-field field">
+                            <select name="DoorType" name="door-type" >
+                                <option value="">Choose A Door Type</option>
+                                <option value="Tip-Up">Tip-Up</option>
+                                <option value="Sectional Over-Head">Sectional Over-Head</option>
+                            </select>
+                        </div>
+                        <div class="input-field field">
+                            <select name="DoorColour" name="door-colour" >
+                                <option value="">Choose A Door Colour</option>
+                                <option value="Charcoal">Charcoal</option>
+                                <option value="Bronze">Bronze</option>
+                                <option value="White">White</option>
+                            </select>
+                            <h4>Other Colours</h4>
+                            <input type="text" placeholder="Enter A Different Colour">
+                        </div>
+                        <div class="input-field field">
+                            <select name="DoorMaterial" name="door-material" >
+                                <option value="">Choose A Door Material</option>
+                                <option value="Aluminium">Aluminium</option>
+                                <option value="Aluzink">Aluzink</option>
+                                <option value="Timber">Timber</option>
+                            </select>
+                        </div>
+                    </div>
+                    <h3>Doorway Measurements</h3>
+                    <div class="input-box">
+                        <div class="input-field field">
+                            <input type="text" placeholder="Height Of Doorway" name="height" class="item" autocomplete="off" >
+                        </div>
+                        <div class="measurements-field field">
+                            <input type="text" placeholder="Width Of Doorway" name="width" class="item" autocomplete="off" >
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="input-field field">
+                            <input type="text" placeholder="Nip-Space" name="nip-space" class="item" autocomplete="off" >
+                        </div>
+                        <div class="input-field field">
+                            <input type="text" placeholder="Headroom" name="headroom" class="item" autocomplete="off" >
+                        </div>
+                    </div>
+                </div>
+                <center>
+                <button type="submit" class="btn btn-dark">Submit</button>
+                </center>
+            </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
