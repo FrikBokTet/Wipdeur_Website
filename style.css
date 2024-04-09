@@ -247,43 +247,106 @@ img {
 
 /* Doors */
 
+* {box-sizing:border-box}
+
 .doors {
-    padding: 40px 0; 
+    padding: 40px 0;
 }
 
 .doors .doors-heading {
-    width: 700px;
+    width: auto;
     margin-bottom: 40px;
 }
 
-.doors .doors-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-.doors .doors-grid .card {
-    display: inline-block;
-    padding: 10px;
-    height: 125px;
+/* Hide the images by default */
+.doorSlides {
+  display: none;
 }
 
-.doors .doors-grid .card img {
-    border: 5px solid var(--primary-color);
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: none;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.doors .doors-grid .card .img-top {
-    display: none;
-    position: absolute;
-    height: 105px;
-    width: 178px;
+/* Position buttons */
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
 }
 
-.doors .doors-grid .card:hover .img-top {
-    display: inline;
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+/* On hover, a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: relative;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #4891ff;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 /* Text Classes */
@@ -405,29 +468,6 @@ img {
     .text-xxl {
         font-size: 2.5rem;
     }
-
-    .doors .doors-grid img {   
-        height: 100%;
-        width: 100%;
-    }
-    
-    .doors .doors-grid .card {
-        height: 150px;
-        width: 100%;
-    }
-
-    .doors .doors-grid .card .img-top {
-        display: none;
-        position: absolute;
-        height: 105px;
-        width: 178px;
-    }
-
-    .doors .doors-grid .card:hover .img-top {
-        display: inline;
-        height: 130px;
-        width: 150px;
-    }
 }
 
 @media (max-width: 670px) {
@@ -482,63 +522,12 @@ img {
     .text-md {
         font-size: 1.1rem;
     }
-
-    .doors .doors-heading {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .doors .doors-grid img {   
-        height: 100%;
-        width: 100%;
-    }
-    
-    .doors .doors-grid .card {
-        height: 300px;
-        width: 100%;
-    }
-
-    .doors .doors-grid .card .img-top {
-        display: none;
-        position: absolute;
-        height: 105px;
-        width: 178px;
-    }
-
-    .doors .doors-grid .card:hover .img-top {
-        display: inline;
-        height: 280px;
-        width: 620px;
-    }
 }
 
 
 @media (max-width: 500px) {
     .text-xxl {
         font-size: 2rem;
-    }
-
-    .doors .doors-grid img {   
-        height: 100%;
-        width: 100%;
-    }
-
-    .doors .doors-grid .card {
-        height: 300px;
-        width: 100%;
-    }
-
-    .doors .doors-grid .card .img-top {
-        display: none;
-        position: absolute;
-        height: 105px;
-        width: 178px;
-    }
-
-    .doors .doors-grid .card:hover .img-top {
-        display: inline;
-        height: 280px;
-        width: 430px;
     }
 }
 
